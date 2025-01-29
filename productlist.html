@@ -23,7 +23,9 @@
   <body>
     <main>
       <h1><a href="index.html">webshop</a></h1>
-      <h2>productlist</h2>
+      <div id="productlist_h2">
+        <h2>PRODUCT LIST</h2>
+      </div>
       <div class="productlist_flex">
         <a href="product.html">
           <div class="product_card">
@@ -44,29 +46,32 @@
               alt="picture of charli xcx"
             />
             <h3 class="product_title_card">PRODUCT TITLE</h3>
-            <h3 class="product_price_card">1000 DKK</h3>
+            <h3 class="product_price_card">800 DKK</h3>
           </div>
         </a>
         <a href="product.html">
-          <div class="product_card">
+          <div class="product_card product_card_sale">
             <img
               class="product_img_card"
               src="img/placeholder_charli.png"
               alt="picture of charli xcx"
             />
             <h3 class="product_title_card">PRODUCT TITLE</h3>
-            <h3 class="product_price_card">1000 DKK</h3>
+            <h3 class="product_price_card product_price_overlined">1000 DKK</h3>
+            <h3 class="product_sale_card">800 DKK</h3>
           </div>
         </a>
         <a href="product.html">
-          <div class="product_card">
+          <div class="product_card product_card_soldout">
             <img
               class="product_img_card"
               src="img/placeholder_charli.png"
               alt="picture of charli xcx"
             />
+            <img class="product_img_card_x" src="img/soldout.svg" alt="red x" />
             <h3 class="product_title_card">PRODUCT TITLE</h3>
             <h3 class="product_price_card">1000 DKK</h3>
+            <h3 class="product_soldout_card">SOLD OUT</h3>
           </div>
         </a>
       </div>
