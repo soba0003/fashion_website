@@ -175,6 +175,7 @@ a {
 .product_soldout_card,
 .product_sale_card {
   font-size: 0.55rem;
+  text-transform: uppercase;
 }
 
 .product_title_card {
@@ -335,9 +336,6 @@ a {
 }
 
 @media (min-width: 700px) {
-  #main_product {
-  }
-
   #product_grid {
     grid-template-columns: 50% 50%;
     max-width: 1000px;
