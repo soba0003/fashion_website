@@ -282,12 +282,16 @@ a {
 .product_size {
   margin: 30px 0 2px 0;
   padding: 0 3px;
+  grid-row: 3;
+  grid-column: 1/2;
 }
 
 #sizebox_flex {
   display: flex;
   flex-wrap: wrap;
   padding: 0 3px;
+  grid-row: 4;
+  grid-column: 1/2;
 }
 
 .sizebox {
@@ -307,6 +311,8 @@ a {
 
 #add_to_bag {
   display: grid;
+  grid-row: 5;
+  grid-column: 1/2;
   background-color: red;
   width: 100%;
   height: 40px;
@@ -322,4 +328,61 @@ a {
   width: 100%;
   height: 300px;
   margin-top: 30px;
+  grid-row: 6;
+  grid-column: 1/2;
+}
+
+@media (min-width: 700px) {
+  #main_product {
+  }
+
+  #product_grid {
+    grid-template-columns: 50% 50%;
+    max-width: 1000px;
+    justify-self: center;
+  }
+  .product_big_picture {
+    width: 100%;
+    object-fit: cover;
+    grid-row: 1/7;
+    grid-column: 1/2;
+  }
+  .product_price,
+  .product_title {
+    grid-row: 2;
+    grid-column: 2/3;
+    margin-top: 50px;
+  }
+  .product_size {
+    grid-row: 3;
+    grid-column: 2/3;
+    margin-top: 140px;
+  }
+  #sizebox_flex {
+    grid-row: 4;
+    grid-column: 2/3;
+    margin-top: 10px;
+  }
+  #add_to_bag {
+    grid-row: 5;
+    grid-column: 2/3;
+    margin-top: 10px;
+  }
+  #product_description {
+    grid-row: 6;
+    grid-column: 2/3;
+    margin-top: 50px;
+  }
+  #small_pictures_flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1000px;
+    justify-self: center;
+    justify-content: center;
+  }
+  .product_small_picture {
+    width: 250px;
+    height: auto;
+  }
 }
