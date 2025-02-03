@@ -13,7 +13,7 @@ function show(data) {
   console.log(data);
   productGrid.innerHTML = `<img
           class="product_big_picture"
-          src="${`https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp`}"
+          src="${`d`}"
           alt="picture of black fleece jacket"
         />
         <h3 class="product_title">${data.productdisplayname}</h3>
@@ -45,6 +45,5 @@ function show(data) {
         <div id="product_description">
           <p>${data.description}</p>
         </div>
-        
         `;
 }

@@ -9,6 +9,7 @@ function getData() {
 }
 
 function showProducts(data) {
+  // map = gør man kan loope oplysningerne, så det bliver én lang streg af html når man bruger join
   const markup = data
     .map(
       (product) =>
