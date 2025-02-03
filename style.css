@@ -117,6 +117,7 @@ a {
   a {
     place-self: center;
     color: white;
+    text-transform: uppercase;
   }
 }
 
