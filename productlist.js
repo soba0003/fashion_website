@@ -1,7 +1,9 @@
 window.addEventListener("load", getData);
 
 const productlist = document.querySelector(".productlist_flex");
-let url = `https://kea-alt-del.dk/t7/api/products/`;
+const myCategory = new URLSearchParams(window.location.search).get("category");
+
+let url = `https://kea-alt-del.dk/t7/api/products?category=${myCategory}`;
 
 function getData() {
   console.log("getData");

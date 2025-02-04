@@ -1,12 +1,13 @@
 window.addEventListener("load", getData);
 
-const id = 1528;
-const productUrl = `https://kea-alt-del.dk/t7/api/products/${id}`;
 const productGrid = document.querySelector("#product_grid");
+const id = new URLSearchParams(window.location.search).get("id");
+
+let url = `https://kea-alt-del.dk/t7/api/products/${id}`;
 
 function getData() {
   console.log("getData");
-  fetch(productUrl).then((response) => response.json().then((data) => show(data)));
+  fetch(url).then((response) => response.json().then((data) => show(data)));
 }
 
 function show(data) {

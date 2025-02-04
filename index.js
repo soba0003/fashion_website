@@ -8,11 +8,16 @@ function getData() {
   fetch(url).then((response) => response.json().then((data) => showCategories(data)));
 }
 
+// kan også skrives sådan: fetch(url).then((response) => response.json()).then(showCategories);
+
 function showCategories(data) {
   // map = gør man kan loope oplysningerne, så det bliver én lang streg af html når man bruger join
-  // cat = her bare forkortelse for categories for ikke at blande dem sammen
+  // ?category=${} = sender en parameter + nøgle med til næste html side
   const markup = data
-    .map((cat) => `<li class="categories_box"><a href="productlist.html">${cat.category}</a></li>`)
+    .map(
+      (element) =>
+        `<li class="categories_box"><a href="productlist.html?category=${element.category}">${element.category}</a></li>`
+    )
     .join("");
 
   categories.innerHTML = markup;
